@@ -44,6 +44,14 @@ const App = () => {
           setMessageClass('')
         }, 5000)
       })
+      .catch(error => {
+        setMessageClass('error')
+        setNotificationMessage(error.response.data.error)
+        setTimeout(() => {
+          setNotificationMessage(null)
+          setMessageClass('')
+        }, 5000)
+      })
     }
     else { 
       if (window.confirm(`${newName} is already added to phonebook. Replace the old number with the new?`)) {
@@ -54,6 +62,20 @@ const App = () => {
           setPersons(persons.map(contact => contact.id !== contactExists.id ? contact : returnedContact))
           setNewName('')
           setNewNumber('')
+          setMessageClass('success')
+          setNotificationMessage(`Updated ${newName}`)
+          setTimeout(() => {
+          setNotificationMessage(null)
+          setMessageClass('')
+        }, 5000)
+        })
+        .catch(error => {
+          setMessageClass('error')
+          setNotificationMessage(error.response.data.error)
+          setTimeout(() => {
+            setNotificationMessage(null)
+            setMessageClass('')
+          }, 5000)
         })
       }
     }
