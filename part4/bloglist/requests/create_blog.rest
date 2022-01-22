@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs HTTP/1.1
+content-type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvdWxhIiwiaWQiOiI2MWVjNDgzYjM0Mzg2MTA1ZjRmNThlNzYiLCJpYXQiOjE2NDI4ODA3MjYsImV4cCI6MTY0Mjg4NDMyNn0.nRpEYjSysdxrUdh-Ver63BcFb2et84xrcWMVMnse_Lc
+
+{
+    "title": "Psihoules",
+    "author": "TP",
+    "url": "www.kalavrita.com",
+    "likes": 12
+}

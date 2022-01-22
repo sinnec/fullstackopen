@@ -1,0 +1,9 @@
+PUT http://localhost:3003/api/blogs/61e5b41ba9fd732fa4f09e98 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Black Fungus",
+    "author": "Delta V",
+    "url": "www.covid19.gr",
+    "likes": 125
+}
